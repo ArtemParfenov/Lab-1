@@ -1,0 +1,26 @@
+MAINS                                                                                                         PAGE 1
+
+                       1    $MOD51 
+0000                   2    org 00h 
+0000 900B00            3            mov dptr,#0b00h ; start at 0B00h
+0003 7A00              4            mov r2, #2000h ; cycle counter
+0005 7955              5            mov r1, #055h  ; nabor
+0007 C290              6            clr P1.0
+0009                   7    test:
+0009 E9                8            mov a, r1 
+000A F0                9            movx @dptr, a ; xram[dptr] = a
+000B E0               10            movx a, @dptr ; a = xram[dptr] -> check 
+000C 6452             11            xrl a, #052h ; a xor 055h
+000E 7003             12            jnz error ; if a != 0 -> go to error
+0010 A3               13            inc dptr ; else increase address
+0011 DAF6             14            djnz r2, test ; decrease cycle counter and if r2 != 0 -> go to test
+0013                  15    error: ; else error
+0013 D290             16            setb P1.0 ; light an indicator 
+                      17    END
+
+VERSION 1.2k ASSEMBLY COMPLETE, 0 ERRORS FOUND
+MAINS                                                                                                         PAGE 2
+
+ERROR. . . . . . . . . . . . . .  C ADDR  0013H  
+P1 . . . . . . . . . . . . . . .  D ADDR  0090H  PREDEFINED  
+TEST . . . . . . . . . . . . . .  C ADDR  0009H  
