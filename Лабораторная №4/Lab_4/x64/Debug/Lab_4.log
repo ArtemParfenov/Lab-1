@@ -1,0 +1,11 @@
+﻿  Assembling file2.asm...
+file2.asm(1): error A2008: syntax error : .
+file2.asm(2): error A2008: syntax error : .
+file2.asm(12): error A2070: invalid instruction operands
+file2.asm(19): error A2070: invalid instruction operands
+file2.asm(21): error A2070: invalid instruction operands
+file2.asm(23): error A2070: invalid instruction operands
+file2.asm(33): error A2070: invalid instruction operands
+file2.asm(49): error A2070: invalid instruction operands
+file2.asm(51): warning A6004: procedure argument or local not referenced : C
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\file2.obj" /W3 /errorReport:prompt  /Tafile2.asm" с кодом "1".
