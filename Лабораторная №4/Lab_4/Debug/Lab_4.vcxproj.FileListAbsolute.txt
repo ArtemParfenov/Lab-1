@@ -1,3 +1,0 @@
-C:\Users\class\source\repos\Lab_4\Debug\Lab_4.exe
-C:\Users\class\source\repos\Lab_4\Debug\Lab_4.pdb
-C:\Users\idgaf\Desktop\3 курс\2 сем\Микропроцессоры\Лабораторная №4\Lab_4\Debug\Lab_4.exe
